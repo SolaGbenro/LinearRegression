@@ -35,6 +35,20 @@ split = sample.split(dataset$Purchased, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
+# Feature Scaling
+# Currently our encoded data are FACTORS (see above)
+# factors are NOT numeric types and will need to be converted.
+#       training_set = scale(training_set)
+#       test_set = scale(test_set)
+
+# Here we select the columns that ARE numeric types
+training_set[, 2:3] = scale(training_set[, 2:3])
+test_set[, 2:3] = scale(test_set[, 2:3])
+
+
+
+
+
 
 
 

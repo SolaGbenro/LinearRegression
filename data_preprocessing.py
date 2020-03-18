@@ -9,10 +9,11 @@ import pandas as pd
 from sklearn import preprocessing
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+
 
 """
     Import the dataset
@@ -112,7 +113,6 @@ X_train = sc_X.fit_transform(X_train)
 # sc_X has been fit, no longer required
 X_test = sc_X.transform(X_test)
 # FEATURE SCALING OF DUMMY VARIABLES WOULD OCCUR HERE
-
 
 
 
