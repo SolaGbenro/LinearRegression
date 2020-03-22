@@ -27,7 +27,7 @@ y = dataset.iloc[:, 2].values
 lin_reg = LinearRegression()
 lin_reg.fit(X, y)
 
-# Fitting Polunomial Regressino to the dataset
+# Fitting Polunomial Regression to the dataset
 # Will transform X into a new matrix of features that will contrain x^2, x^3, x^n
 poly_reg = PolynomialFeatures(degree = 3)
 X_poly = poly_reg.fit_transform(X)
