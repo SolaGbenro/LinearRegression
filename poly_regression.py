@@ -12,22 +12,22 @@ from sklearn.preprocessing import PolynomialFeatures
 # Importing the dataset
 dataset = pd.read_csv('Position_Salaries.csv')
 # Matrix of independent variable
-# Explicitily make X a matrix of 10 rows 1 column(s), otherwise default is 1d vector
+# Explicitly make X a matrix of 10 rows 1 column(s), otherwise default is 1d vector
 X = dataset.iloc[:, 1:2].values
 # DEPENDENT VARIABLE VECTOR (not a matrix, see above)
 y = dataset.iloc[:, 2].values
 
-# Splitting the dataset into the Training set and Test set
-# no split required, data is very limited
+# Splitting the dataset into the Training-set and Test-set
+# no split required, this data is very limited
 
 # Feature Scaling
-# no feature scaling required, data is very limited
+# no feature scaling required, this data is very limited
 
-# Fitting Linear REgression to the dataset
+# Fitting Linear Regression to the dataset
 lin_reg = LinearRegression()
 lin_reg.fit(X, y)
 
-# Fitting Polunomial Regression to the dataset
+# Fitting Polynomial Regression to the dataset
 # Will transform X into a new matrix of features that will contrain x^2, x^3, x^n
 poly_reg = PolynomialFeatures(degree = 3)
 X_poly = poly_reg.fit_transform(X)
@@ -78,7 +78,6 @@ plt.show()
 # takes a martrix
 lin_reg.predict([[6.5]])
 # output: array([330378.78787879])
-
 
 # Predicting a new result with Polynomial Regression
 lin_reg_2.predict(poly_reg.fit_transform([[6.5]]))
