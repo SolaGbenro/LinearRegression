@@ -1,8 +1,3 @@
-"""
-Simple Linear Regression
-Salary_Prediction
-Author: Sola Gbenro
-"""
 # importing libraries
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -24,7 +19,6 @@ y = dataset.iloc[:, 1].values
 """
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
 
-
 """
     Fitting Simpe Linear Regression to the Training set
 """
@@ -43,7 +37,6 @@ plt.title('Salary vs Experience (Training set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
-
 
 # Visualizing the TEST set results
 plt.scatter(X_test, y_test, color = 'red')
